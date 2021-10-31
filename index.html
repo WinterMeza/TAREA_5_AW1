@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller5_TA5</title>
+    <link rel="icon" href="img/Calculadora.png">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<!--EJERCICIO 1-->
+
+<body>
+    <section>
+        <h2 > <strong> EJERCICIO 1</strong> </h2>
+        <p>
+            1.- Cree un array llamado meses, este array deberá almacenar el nombre de los doce meses del año. <br> 
+            Muestre por pantalla el nombre de cada uno de ellos utilizando un bucle for.
+        </p>
+        <div>
+            <script type="text/javascript">
+            var meses = new Array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+            for (i = 0; i < meses.length; i++) {
+                document.write("<br>" + meses[i]);
+            }
+        </script>
+        </div>
+        
+        <!--EJERCICIO 2-->
+        <h2>EJERCICIO 2</h2> 
+        <p>
+            2.- Cree un script que defina un objeto llamado Producto_alimenticio, este objeto debe presentar las <br> 
+                propiedades  código, nombre y precio,además del método imprimeDatos, el cual escribe por pantalla <br>
+                los valores de sus propiedades. Posteriormente, cree tres instancias de este objeto  y guárdelas en un array.<br>
+                Con la ayuda del bucle for, utilice el método imprimeDatos para mostrar por pantalla los valores de los tres <br>
+                objetos instanciados.
+        </p>
+        <div>
+            <script type="text/javascript">
+         
+            //  Se crea el objeto Productos_Alimenticio
+            function Productos_Alimenticio(codigo_in, nombre_in, precio_in){ 
+                      this.codigo = codigo_in;// Propiedades
+                      this.nombre = nombre_in;//Propiedades
+                   this.precio = precio_in;//Propiedades
+                      this.imprimeDatos = imprimeDatosTotal; //Metodo imprimir datos total
+               }
+                   
+              // Se crean las instancias del objeto y se guarda en un Array (Vector)
+               var producto1 = new Productos_Alimenticio("1","Aceite", "2.80"); //ARRAY 1
+               var producto2 = new Productos_Alimenticio("2","Azúcar", "1.50");//ARRAY 2
+               var producto3 = new Productos_Alimenticio("3","Arroz", "0.80");// ARRAY 3
+       
+               function imprimeDatosTotal(){ 
+                      document.write("<br><br>Código: " + this.codigo);
+                      document.write("<br>Nombre: " + this.nombre);
+                      document.write("<br>Precio: " + this.precio);
+               }
+               // Se muestra con un bucle for el método imprimeDatos para mostrar por pantalla los 
+               // de los tres objetos instanciados
+               var productos = new Array(producto1, producto2, producto3);
+               for(var i=0; i<productos.length; i++){
+                   productos[i].imprimeDatos();
+               }
+           </script>
+        </div>
+    </section>
+   
+    
+</body>
+</html>
